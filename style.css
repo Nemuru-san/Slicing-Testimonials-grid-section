@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--Lightgrayishblue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding: 20px 0; */
+}
+
+.box {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px grey;
+}
+
+.head-daniel,
+.head-jonathan,
+.head-jeanette,
+.head-petrick,
+.head-kira {
+    display: flex;
+    align-items: center;
+}
+
+.img img {
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 10px;
+}
+
+.daniel {
+    background-color: var(--Moderateviolet);
+    color: var(--White);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 88% 0%;
+}
+
+.jonathan {
+    background-color: var(--Verydarkgrayishblue);
+    color: var(--White);
+}
+
+.jeanette {
+    background-color: var(--White);
+    color: var(--Verydarkgrayishblue);
+}
+
+.petrick {
+    background-color: var(--Verydarkblackishblue);
+    color: var(--White);
+}
+
+.kira {
+    background-color: var(--Lightgray);
+    color: var(--Verydarkblackishblue);
+}
+
+.daniel .up-text,
+.petrick .up-text,
+.jonathan .up-text,
+.jeanette .up-text,
+.kira .up-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.daniel .quote,
+.petrick .quote,
+.jonathan .quote,
+.jeanette .quote,
+.kira .quote {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .daniel {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .jeanette {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .petrick {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .kira {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+}
